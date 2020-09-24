@@ -22,6 +22,20 @@ void find_primes(vector<int> &s, int n)
     }
 }
 
+
+void sieve(int N) {
+    bool isPrime[N+1]={0};
+    isPrime[0] = 1;
+    isPrime[1] = 1;
+    for(int i = 2; i * i <= N; ++i) {
+         if(!isPrime[i]) {                    
+             for(int j = i * i; j <= N ;j += i)
+                 isPrime[j] = 1;
+        }
+    }
+}
+
+
 int main()
 {
     ios_base::sync_with_stdio(false);
