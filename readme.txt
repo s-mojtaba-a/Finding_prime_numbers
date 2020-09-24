@@ -1,3 +1,1 @@
-It is the fastest algorithm I have ever seen.
-It is even faster than liniear sieve of eratosten.
-The complexity of the algorithm is O(n). 
+It's not as good as sieve of eratosten, but it will work for N>=3000000 .
