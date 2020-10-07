@@ -24,6 +24,9 @@ void find_primes(vector<int> &s, int n)
 
 
 void sieve(int N) {
+    /* bool *isPrime = new bool [N+1] ;
+    for (int i=0;i<=N;i++) isPrime[i]=0;
+    */
     bool isPrime[N+1]={0};
     isPrime[0] = 1;
     isPrime[1] = 1;
