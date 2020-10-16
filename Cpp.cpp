@@ -24,16 +24,15 @@ void find_primes(vector<int> &s, int n)
 
 
 void sieve(int N) {
-    /* bool *isPrime = new bool [N+1] ;
-    for (int i=0;i<=N;i++) isPrime[i]=0;
+    /* bool *is_prime = new bool [N+1] ;
+    for (int i=0;i<=N;i++) is_prime[i]=1;
     */
-    bool isPrime[N+1]={0};
-    isPrime[0] = 1;
-    isPrime[1] = 1;
+    is_prime[0] = 0;
+    is_prime[1] = 0;
     for(int i = 2; i * i <= N; ++i) {
-         if(!isPrime[i]) {                    
+         if(is_prime[i]) {                    
              for(int j = i * i; j <= N ;j += i)
-                 isPrime[j] = 1;
+                 is_prime[j] = 0;
         }
     }
 }
