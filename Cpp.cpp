@@ -61,6 +61,17 @@ def find_primes(s, n):
         if not flag:
             s.append(i)
 
+                
+is_prime = [1]*(n+1)
+def sieve(n):
+    is_prime[0] = is_prime[1] = 0
+    i = 2
+    while (i*i <= n):
+        if is_prime[i]:
+            for j in range(i*i, n+1, i):
+                is_prime[j] = 0
+        i += 1
+
 
 if __name__ == '__main__':
     n = 1000
